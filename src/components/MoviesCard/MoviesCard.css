@@ -1,0 +1,97 @@
+.moviesCard {
+    position: relative;
+    max-width: 360px;
+}
+
+.moviesCard-image {
+    /* position: relative; */
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    cursor: pointer;
+}
+
+.moviesCard-image:hover .moviesCard__button-save {
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+
+.moviesCard:hover .moviesCard__button-save {
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+
+.moviesCard__title {
+    width: 250px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.moviesCard__duration {
+    width: 52px;
+    height: 15px;
+    text-align: center;
+    align-self: center;
+    margin: 0;
+    padding: 3px 0 0;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 10px;
+    color: #8B8B8B;
+    border-radius: 3px;
+    background: #2F2F2F;
+}
+
+.moviesCard__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.moviesCard__button-save {
+    position: absolute;
+    top:14px;
+    right: 14px;
+    width: 72px;
+    height: 21px;
+    background-color: #313131;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 9px;
+    border-radius: 30px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+
+/* .moviesCard__button-save:hover {
+    opacity: 0.8;   
+} */
+
+@media all and (max-width: 1145px) {
+    .moviesCard {
+        max-width: 339px;
+    }
+
+    .moviesCard__container {
+        justify-content: space-between;
+    }
+}
+
+@media all and (max-width: 715px) {
+    .moviesCard {
+        max-width: 300px;
+    }
+
+    .moviesCard__title {
+        font-size: 12px;
+        line-height: 14.52px;
+    }
+}

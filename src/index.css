@@ -1,0 +1,62 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);
+
+/* page */
+@import url(./components/page.css);
+
+/* Header */
+@import url(./components//Header/Header.css);
+
+/* main */
+@import url(./components/Main/Main.css);
+/* Promo */
+@import url(./components/Main/Promo/Promo.css);
+
+/* NavTab */
+@import url(./components/Main/NavTab/NavTab.css);
+
+/* AboutProject */
+@import url(./components/Main/AboutProject/AboutProject.css);
+
+/* Techs */
+@import url(./components//Main/Techs/Techs.css);
+
+/* AboutMe */
+@import url(./components//Main//AboutMe/AboutMe.css);
+
+/* Portfolio */
+@import url(./components/Main/Portfolio/Portfolio.css);
+
+
+/* Movies */
+@import url(./components/Movies/Movies.css);
+
+/* MoviesCard */
+@import url(./components/MoviesCard/MoviesCard.css);
+
+/* MoviesCardList */
+@import url(./components/MoviesCardList/MoviesCardList.css);
+
+/* Preloader */
+@import url(./components/Preloader/Preloader.css);
+
+/* SearchForm */
+@import url(./components/SearchForm/SearchForm.css);
+
+/* FilterCheckBox */
+@import url(./components/FilterCheckbox/FilterCheckbox.css);
+
+/* Auth */
+@import url(./components//Auth/Auth.css);
+
+/* Profile */
+@import url(./components/Profile/Profile.css);
+
+/* NotFound */
+@import url(./components/NotFound/NotFound.css);
+
+@import url(./components//Navigation/Navigation.css);
+
+
+/* Footer */
+@import url(./components/Footer/Footer.css);

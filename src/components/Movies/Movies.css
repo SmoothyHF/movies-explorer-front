@@ -1,0 +1,21 @@
+.movies__button {
+    margin: 75px auto 80px;
+    display: block;
+    text-align: center;
+    width: 320px;
+    height: 36px;
+    border: solid 1px #424242;
+    border-radius: 6px;
+    color: #FFFFFF;
+    background: transparent;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14.52px;
+    padding: 0;
+    cursor: pointer;
+    transition: .2s opacity linear;
+}
+
+.movies__button:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,156 @@
+.AboutMe {
+    max-width: 1280px;
+    margin: 110px 70px 100px;
+}
+
+.AboutMe__title {
+    margin: 0 0 66px 0;
+    font-style: inter;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #FFFFFF;
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 23px;
+}
+
+.AboutMe__info {
+    display: grid;
+    grid-template-areas:
+    "A E"
+    "B E"
+    "C E"
+    "D E";
+    column-gap: 270px;
+}
+
+.AboutMe__info-name {
+    grid-area: A;
+    margin: 0 0 18px;
+    font-style: inter;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 58px;
+    color: #FFFFFF;
+}
+
+.AboutMe__info-work {
+    grid-area: B;
+    margin: 0;
+    font-style: inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.AboutMe__info-about {
+    grid-area: C;
+    margin: 26px 0 100px;
+    font-style: inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.AboutMe__info-link {
+    grid-area: D;
+    font-style: inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-decoration: none;
+    max-width: 46px;
+    transition: opacity .2s linear;
+}
+
+.AboutMe__info-link:hover {
+    opacity: 0.7;
+}
+
+.AboutMe__info-image {
+    grid-area: E;
+    width: 270px;
+    height: 327px;
+    object-fit: cover;
+}
+
+@media all and (max-width: 850px) {
+    .AboutMe {
+        margin: 90px 50px 90px;
+    }
+
+    .AboutMe__info-name {
+        margin: 0 0 16px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .AboutMe__info {
+        column-gap: 49px;
+    }
+
+    .AboutMe__info-work {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .AboutMe__info-about {
+        margin: 20px 0 87px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .AboutMe__info-image {
+        width: 255px;
+        height: 307px;
+    }
+}
+
+@media all and (max-width: 560px) {
+    .AboutMe {
+        margin: 70px 14px 70px;
+    }
+
+    .AboutMe__title {
+        margin: 0 0 60px 0;
+        font-size: 18px;
+        line-height: 22px;
+        padding-bottom: 28px;
+    }
+
+    .AboutMe__info {
+        display: grid;
+        grid-template-areas:
+        "E"
+        "A"
+        "B"
+        "C"
+        "D";
+    }
+
+    .AboutMe__info-image {
+        width: 292px;
+        height: 352px;
+        margin: 0 auto;
+    }
+
+    .AboutMe__info-name {
+        margin: 0 0 20px;
+        font-size: 30px;
+        line-height: 36.31px;
+    }
+
+    .AboutMe__info-work {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .AboutMe__info-about {
+        margin: 20px 0 40px;
+        font-size: 11px;
+        line-height: 16px;
+    }
+}
