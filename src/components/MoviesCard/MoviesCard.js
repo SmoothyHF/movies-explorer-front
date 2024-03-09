@@ -4,7 +4,7 @@ import img from "../../images/card-photo.jpg"
 function MoviesCard() {
     return (
         <div className="moviesCard">
-            <img className="moviesCard-image" src={img} alt="Превью фильма"></img>
+            <img className="moviesCard-image" src={img} alt="Превью фильма"/>
             <button className="moviesCard__button-save">сохранить</button>
             <div className="moviesCard__container">
                 <p className="moviesCard__title">Баския: Взрыв реальности</p>

@@ -28,7 +28,6 @@ function App() {
     setIsNavigationOpen(false);
   };
 
-
   function auth() {
     setLoggedIn(true);
   };
