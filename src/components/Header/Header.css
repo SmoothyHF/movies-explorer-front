@@ -21,6 +21,7 @@
     width: 212px;
     display: flex;
     justify-content: space-between;
+    margin-left: 60px;
 }
 
 .header__text-container_hidden {
@@ -139,16 +140,23 @@
 
 @media all and (max-width: 560px) {
     .header {
-        margin: 0 14px 18px;
+        margin: 0 14px 14px;
     }
 
     .header__button-register {
         font-size: 10px;
+        margin-right: 13px;
     }
 
     .header__button-login {
         font-size: 10px;
         width: 54px;
         height: 26px;
+    }
+    
+    .header__button-menu {
+        background: url(../../images/button-menu-320.svg);
+        min-width: 40px;
+        height: 43px;
     }
 }

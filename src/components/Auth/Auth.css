@@ -1,14 +1,25 @@
 .auth {
     max-width: 396px;
+    min-height: 700px;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .auth__link {
     align-self: flex-start;
+}
+
+.auth__error-message {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #EE3465;
+    align-self: flex-start;
+    margin-top: 10px;
+    /* display: none; */
 }
 
 .auth__logo {
@@ -28,7 +39,7 @@
     line-height: 29px;
     color: #FFFFFF;
     align-self: flex-start;
-    margin: 40px 0 20px;
+    margin: 38px 0 20px;
 }
 
 .auth__input {
@@ -67,6 +78,7 @@
     padding: 0;
     margin: 70px 0 16px;
     transition: opacity .2s linear;
+    margin-top: auto;
 }
 
 .auth__button:hover {
@@ -78,7 +90,7 @@
     font-size: 14px;
     line-height: 17px;
     color: #8B8B8B;
-    margin: 0;
+    margin: 0 0 70px 0;
 }
 
 .auth__button_login {
@@ -91,6 +103,7 @@
     padding: 0;
     cursor: pointer;
     transition: opacity .2s linear;
+    margin-left: 5px;
 }
 
 .auth__button_login:hover {
@@ -101,11 +114,28 @@
     .auth__logo {
         margin-top: 232px;
     }
+
+    .auth {
+        min-height: 1024px;
+    }
+
+    .auth__button_text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #8B8B8B;
+        margin: 0 0 232px 0;
+    }
 }
 
 @media all and (max-width: 450px) {
     .auth {
         max-width: 260px;
+        min-height: 780px;
+    }
+
+    .auth__link {
+        align-self: center;
     }
 
     .auth__logo {
@@ -114,11 +144,15 @@
 
     .auth__title {
         align-self: flex-start;
-        margin: 50px 0 60px;
+        margin: 45px auto 60px;
     }
 
     .auth__input {
         width: 230px;
+    }
+
+    .auth__input_text {
+        margin: 20px 0 10px;
     }
 
     .auth__button {
@@ -127,6 +161,17 @@
         font-weight: 400;
         font-size: 12px;
         line-height: 14.52px;
-        margin: 157px 0 14px;
+    }
+
+    .auth__button_text {
+        font-size: 12px;
+        line-height: 14.52px;
+        margin: 0 0 30px 0;
+    }
+
+    .auth__button_login {
+        font-size: 12px;
+        line-height: 14.52px;
+        margin-left: 7px;
     }
 }

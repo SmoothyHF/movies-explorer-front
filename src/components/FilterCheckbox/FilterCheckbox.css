@@ -43,3 +43,4 @@
 .FilterCheckbox__input:checked + .FilterCheckbox__slider:after {
     transform: translateX(20px);
 }
+

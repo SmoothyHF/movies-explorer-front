@@ -54,6 +54,7 @@
 @media all and (max-width: 850px) {
     .Footer {
         margin: 0 30px 20px;
+        padding-top: 59px;
     }
 }
 

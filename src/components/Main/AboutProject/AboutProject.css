@@ -5,10 +5,10 @@
 
 .AboutProject__title {
     margin: 0 0 70px 0;
-    font-style: inter;
     font-weight: 400;
     font-size: 22px;
     line-height: 27px;
+    letter-spacing: -0.88px;
     color: #FFFFFF;
     border-bottom: 1px solid #DADADA;
     padding-bottom: 23px;
@@ -23,17 +23,16 @@
 .AboutProject__info-title {
     margin: 0;
     max-width: 550px;
-    font-style: inter;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    letter-spacing: -0.8px;
     color: #FFFFFF;
 }
 
 .AboutProject__info-text {
     margin: 26px 0 110px;
     max-width: 550px;
-    font-style: inter;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -58,7 +57,6 @@
     margin: 0;
     padding: 9px 0;
     min-height: 17px;
-    font-style: inter;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -67,8 +65,7 @@
 }
 
 .AboutProject__stages-back_text {
-    margin: 14px 0 0;
-    font-style: inter;
+    margin: 10px 0 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -85,7 +82,6 @@
     margin: 0;
     padding: 9px 0;
     min-height: 17px;
-    font-style: inter;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -94,8 +90,7 @@
 }
 
 .AboutProject__stages-front_text {
-    margin: 14px 0 0;
-    font-style: inter;
+    margin: 10px 0 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -111,7 +106,6 @@
     .AboutProject__info-text {
         margin: 22px 0 93px;
         max-width: 319px;
-        font-style: inter;
         font-weight: 400;
         font-size: 12px;
         line-height: 18px;
@@ -151,6 +145,40 @@
     }
 
     .AboutProject__stages {
+        grid-template: repeat(2, 35px) / 1fr 2fr;
         margin-top: 60px;
     }
+
+    .AboutProject__stages-back_text {
+        margin: 0;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13.31px;
+    }
+
+    .AboutProject__stages-back_title {
+        padding: 11px 0;
+        min-height: 13px;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13.31px;
+        color: #000000;
+        text-align: center;
+    }
+
+    .AboutProject__stages-front_title {
+        padding: 11px 0;
+        min-height: 13px;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13.31px;
+    }
+    
+    .AboutProject__stages-front_text {
+        margin: 0;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13.31px;
+    }
+    
 }

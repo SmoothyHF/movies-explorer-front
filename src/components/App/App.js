@@ -46,7 +46,8 @@ function App() {
           :
           ''
       }
-      <Routes>
+      <main>
+      <Routes >
         <Route path='/' element={ <Main />} />
 
         <Route path='/movies' element={<Movies />} />
@@ -61,6 +62,7 @@ function App() {
 
         <Route path='/404' element={<NotFound />} />
       </Routes>
+      </main>
       {
         pathname === '/' ||
           pathname === '/movies' ||

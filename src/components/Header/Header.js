@@ -12,7 +12,7 @@ function Header(props) {
             <>
             <nav className="header__link-container">
                 <Link className={`header__link ${pathname === '/movies' ? 'header__link_active' : ''}`} to="/movies">Фильмы</Link>
-                <Link className={`header__link ${pathname === '/saved-movies' ? 'header__link_active' : ''}`} to="/saved-movies">Сохраненные фильмы</Link>
+                <Link className={`header__link ${pathname === '/saved-movies' ? 'header__link_active' : ''}`} to="/saved-movies">Сохранённые фильмы</Link>
             </nav>
             <Link to='/profile'>
             <button className='header__button-account'>{'Аккаунт'}</button>

@@ -12,7 +12,10 @@ function Login() {
             <p className="auth__input_text">Пароль</p>
             <input className="auth__input"  type="password" required />
             <button className="auth__button" type="submit">Войти</button>
-            <p className="auth__button_text">Ещё не зарегистрированы? <button className="auth__button_login">Регистрация</button></p>
+            <p className="auth__button_text">Ещё не зарегистрированы?
+            <Link to="/signup" >
+            <button className="auth__button_login">Регистрация</button>
+            </Link></p>
         </form>
     )
 }

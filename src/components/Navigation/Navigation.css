@@ -33,7 +33,7 @@
     width: 22px;
     height: 22px;
     align-self: flex-end;
-    margin: 22px 22px 105px 0;
+    margin: 28.5px 28.5px 114px 0;
     background: url(../../images/button-menu-close.svg) center no-repeat;
     padding: 0;
     transition: opacity .2s linear;
@@ -99,7 +99,7 @@
         min-width: 320px;
     }
     .Navigation__button-close {
-        margin: 13px 13px 99px;
+        margin: 17.44px 17.44px 109px;
     }
 
     .Navigation__link {
@@ -112,6 +112,6 @@
     }
 
     .Navigation__button-account {
-        margin-bottom: 46px;
+        margin-bottom: 66px;
     }
 }

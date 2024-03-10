@@ -1,6 +1,6 @@
 .NotFound {
     max-width: 400px;
-    margin: 246px auto 0;
+    margin: 246px auto 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,13 +41,13 @@
 
 @media all and (max-width: 770px) {
     .NotFound {
-        margin: 408px auto 0;
+        margin: 408px auto 20px;
     }
 }
 
 @media all and (max-width: 450px) {
     .NotFound {
-        margin: 329px auto 0;
+        margin: 329px auto 20px;
     }
 
     .NotFound__title {
