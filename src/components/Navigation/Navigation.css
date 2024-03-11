@@ -1,0 +1,117 @@
+.Navigation {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    min-width: 520px;
+    height: 100%;
+    background: #202020;
+    position: fixed;
+    top: 0;
+    right: -520px;
+    transition: right .1s linear;
+}
+
+.Navigation_opened {
+    visibility: visible;
+    right: 0;
+}
+
+.Navigation__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* justify-content: center; */
+    margin: 0 auto;
+    padding: 0;
+}
+
+.Navigation__button-close {
+    border: none;
+    width: 22px;
+    height: 22px;
+    align-self: flex-end;
+    margin: 28.5px 28.5px 114px 0;
+    background: url(../../images/button-menu-close.svg) center no-repeat;
+    padding: 0;
+    transition: opacity .2s linear;
+    cursor: pointer;
+}
+
+.Navigation__button-close:hover {
+    opacity: 0.8;
+}
+
+.Navigation__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.78px;
+    color: #FFFFFF;
+    margin: 0 0 28px;
+    transition: .2s opacity linear;
+}
+
+.Navigation__link:hover {
+    opacity: 0.8;
+}
+
+.Navigation__link:last-of-type {
+    margin: 0;
+}
+
+.Navigation__link_active {
+    border-bottom: solid 2px #FFFFFF;
+    padding-bottom: 4px;
+    margin: 0 0 22px;
+}
+
+.Navigation__link-account {
+    margin-top: auto;
+}
+
+.Navigation__button-account {
+    font-style: inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    width: 100px;
+    height: 32px;
+    background-color: #313131;
+    color: #FFFFFF;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: opacity .2s linear;
+    align-self: flex-end;
+    margin-bottom: 90px;
+}
+
+.Navigation__button-account:hover {
+    opacity: 0.8;
+}
+
+@media all and (max-width: 540px) {
+    .Navigation {
+        min-width: 320px;
+    }
+    .Navigation__button-close {
+        margin: 17.44px 17.44px 109px;
+    }
+
+    .Navigation__link {
+    margin: 0 0 24px;
+    }
+
+    .Navigation__link_active {
+        padding-bottom: 7px;
+        margin: 0 0 15px;
+    }
+
+    .Navigation__button-account {
+        margin-bottom: 66px;
+    }
+}
