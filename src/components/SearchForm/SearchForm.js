@@ -28,8 +28,12 @@ function SearchForm({ onSubmit }) {
         setIsShortFilm(e.target.checked);
         localStorage.setItem('filterCheckBox', e.target.checked);
 
-        onSubmit({ words, isShortFilm: e.target.checked});
-        localStorage.setItem('SearchForm', words);
+        if (words.trim() === '') {
+            setErrorText('Введите ключевое слово');
+        } else {
+            onSubmit({ words, isShortFilm: e.target.checked });
+            localStorage.setItem('SearchForm', words);
+        }
     }
 
     function handleSubmit(e) {
