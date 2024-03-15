@@ -1,14 +1,19 @@
-const getConfig = (token) => ({
-    baseUrl: 'http://localhost:3000',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-    }
-});
+// const token = localStorage.getItem('jwt');
 
-const token = localStorage.getItem('jwt');
-const config = getConfig(token);
+// const getConfig = (token) => ({
+//     baseUrl: 'http://localhost:3000',
+//     headers: {
+//         'Accept': 'application/json',
+//         'Content-Type': 'application/json',
+//         'Authorization': `Bearer ${token}`
+//     }
+// });
+
+const baseUrl = process.env.REACT_APP_API_URL
+
+// const baseUrl = 'http://localhost:3000';
+
+// const config = getConfig(token);
 
 const checkResponse = (res) => {
     if (res.ok) {
@@ -18,7 +23,7 @@ const checkResponse = (res) => {
 };
 
 function register(name, email, password) {
-    return fetch(`${config.baseUrl}/signup`, {
+    return fetch(`${baseUrl}/signup`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -28,7 +33,7 @@ function register(name, email, password) {
 }
 
 function login(email, password) {
-    return fetch(`${config.baseUrl}/signin`, {
+    return fetch(`${baseUrl}/signin`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -47,7 +52,7 @@ function login(email, password) {
 }
 
 function updateUserData({ email, name }, token) {
-    return fetch(`${config.baseUrl}/users/me`, {
+    return fetch(`${baseUrl}/users/me`, {
         method: 'PATCH',
         headers: {
             'Accept': 'application/json',
@@ -60,7 +65,7 @@ function updateUserData({ email, name }, token) {
 }
 
 function getContent(token) {
-    return fetch(`${config.baseUrl}/users/me`, {
+    return fetch(`${baseUrl}/users/me`, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
@@ -72,7 +77,7 @@ function getContent(token) {
 }
 
 function getSavedMovies(token) {
-    return fetch(`${config.baseUrl}/movies`, {
+    return fetch(`${baseUrl}/movies`, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
@@ -85,7 +90,7 @@ function getSavedMovies(token) {
 
 function SavedMovieStatus(movie, isSaved, token) {
     return isSaved ?
-            fetch(`${config.baseUrl}/movies/${movie.movieId}`, {
+            fetch(`${baseUrl}/movies/${movie.movieId}`, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',
@@ -95,7 +100,7 @@ function SavedMovieStatus(movie, isSaved, token) {
             credentials: 'include',
         }).then(checkResponse)
         :
-        fetch(`${config.baseUrl}/movies`, {
+        fetch(`${baseUrl}/movies`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
