@@ -1,30 +1,60 @@
-import React, { useEffect } from "react";
-import img from "../../images/card-photo.jpg";
+import React from "react";
 import { useLocation } from "react-router-dom";
 
-function MoviesCard() {
+function MoviesCard({ card, onSaveMovie }) {
 
-    const [button, setButton] = React.useState([]);
-    
     const location = useLocation();
+    const isMoviesPage = location.pathname === '/movies';
 
-    const movies = location.pathname === '/movies';
-    const savedMovies = location.pathname === '/saved-movies';
+    const savedMovies = JSON.parse(localStorage.getItem('saved-movies')) || [];
+    const isSaved = savedMovies.some(c => c.movieId === `${card.movieId}`);
+    
+    function handleFilterCard(card) {
+        const defaultValues = {
+            trailerLink: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+        };
 
-    useEffect(() => {
-        if (movies) {
-            setButton(<button className="moviesCard__button-save">сохранить</button>)
-        } if (savedMovies) {
-            setButton(<button className="moviesCard__button-delete"></button>)
+        const filteredCard = { ...card };
+
+        for (const key in filteredCard) {
+            if (filteredCard[key] === null || filteredCard[key] === undefined) {
+                filteredCard[key] = defaultValues[key] || ' ';
+            }
         }
-    }, [movies, savedMovies])
+
+        return filteredCard;
+    }
+
+    const filteredCard = handleFilterCard(card);
+
+    const hours = Math.floor(filteredCard.duration / 60);
+    const minutes = filteredCard.duration % 60;
+
+    const hoursDisplay = hours >= 1 ? `${hours} ч` : '';
+    const minutesDisplay = minutes >= 1 ? `${minutes} м` : '';
+
+    function handleSave() {
+        onSaveMovie(card, isSaved)
+    }
+
     return (
         <div className="moviesCard">
-            <img className="moviesCard-image" src={img} alt="Превью фильма"/>
-            {button}
+            <a className="moviesCard__link" href={filteredCard.trailerLink} target="_blank" rel="noreferrer">
+                <img className="moviesCard-image" src={filteredCard.image} alt="Превью фильма" />
+            </a>
+            <button className={`moviesCard__button
+                ${isSaved ?
+                    isMoviesPage ?
+                        'moviesCard__button_active_movies'
+                        :
+                        'moviesCard__button_active_saved-movies'
+                        :
+                        ''
+                }`
+            } onClick={handleSave} >{isSaved ? '' : 'сохранить'}</button>
             <div className="moviesCard__container">
-                <p className="moviesCard__title">Баския: Взрыв реальности</p>
-                <p className="moviesCard__duration">1ч 17м</p>
+                <p className="moviesCard__title">{filteredCard.nameRU}</p>
+                <p className="moviesCard__duration">{`${hoursDisplay} ${minutesDisplay}`}</p>
             </div>
         </div>
     )

@@ -35,6 +35,18 @@
     margin: 0 0 16px;
 }
 
+.profile__form_input {
+    text-align: right;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13.31px;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
 .profile__form_button {
     font-weight: 400;
     font-size: 13px;
@@ -55,6 +67,40 @@
 .profile__form_button:last-of-type {
     color: #EE3465;
     margin: 0;
+}
+
+.profile__form_button_disabled {
+    color: #C2C2C2;
+    cursor: not-allowed;
+}
+
+.profile__form_button_disabled:hover {
+    opacity: 1;
+}
+
+.profile__error-message {
+  margin: 0;
+  color: #ee3465;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: right;
+}
+
+.profile__error {
+  color: #ee3465;
+  margin: 0;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13.31px;
+}
+
+.profile__success {
+    color: #FFFFFF;
+    margin: 0;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13.31px;
 }
 
 @media all and (max-width: 770px) {
