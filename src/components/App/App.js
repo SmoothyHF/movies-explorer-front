@@ -68,7 +68,9 @@ function App() {
 
   function handleRegister({ name, email, password }, handleErrorText) {
     return register(name, email, password)
-      .then(() => navigate('/signin'))
+    .then(() => login(email, password))
+      .then(() => navigate('/movies'))
+      .then(() => setLoggedIn(true))
       .catch(err => handleErrorText(err.status))
   }
 

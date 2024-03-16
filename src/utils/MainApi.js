@@ -9,9 +9,9 @@
 //     }
 // });
 
-const baseUrl = process.env.REACT_APP_API_URL
+// const baseUrl = process.env.REACT_APP_API_URL
 
-// const baseUrl = 'http://localhost:3000';
+const baseUrl = 'http://localhost:3000';
 
 // const config = getConfig(token);
 
