@@ -50,6 +50,7 @@ function Login({ onLogin }) {
                 type="email"
                 value={values.email}
                 onChange={handleChange}
+                pattern="^\S+@\S+\.\S+$"
                 required
             />
             <span className="auth__error-message">{errors.email}</span>

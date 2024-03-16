@@ -45,8 +45,8 @@ function Profile({ onSignOut, onUpdateUserData }) {
 
         setFormError('');
         setFormSuccess('');
-
-        if (values === currentUser) {
+        
+        if (values.name === currentUser.name && values.email === currentUser.email) {
             setFormError('Эти данные уже используются');
         } else {
             onUpdateUserData(values, setFormSuccess, handleErrorText)
@@ -72,7 +72,7 @@ function Profile({ onSignOut, onUpdateUserData }) {
             </div>
             <span className="profile__error-message">{errors.name && 'Поле "Имя" может содержать только латиницу, кириллицу, пробел или дефис. '}{errors.name}</span>
             <div className="profile__form_text-container">
-                <p className="profile__form_text">Ε-mail</p>
+                <p className="profile__form_text">E-mail</p>
                 <input
                     value={values.email}
                     onChange={handleChange}
@@ -82,6 +82,7 @@ function Profile({ onSignOut, onUpdateUserData }) {
                     maxLength="30"
                     minLength="2"
                     type="email"
+                    pattern="^\S+@\S+\.\S+$"
                     required
                 />
             </div>
