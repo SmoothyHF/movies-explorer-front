@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate, Navigate } from 'react-router-dom';
 
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -210,9 +210,9 @@ function App() {
                 isLoggedIn={loggedIn} />
             } />
 
-            <Route path='/signup' element={<Register onRegister={handleRegister} />} />
+            <Route path='/signup' element={loggedIn ? <Navigate to='/movies' replace /> : <Register onRegister={handleRegister} />} />
 
-            <Route path='/signin' element={<Login onLogin={handleLogin} />} />
+            <Route path='/signin' element={loggedIn ? <Navigate to='/movies' replace /> : <Login onLogin={handleLogin} />} />
 
             <Route path='*' element={<NotFound />} />
           </Routes>
