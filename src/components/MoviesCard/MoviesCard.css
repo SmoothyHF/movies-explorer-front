@@ -89,7 +89,12 @@
     height: 21px;
     background: url(../../images/button-saved-movie.svg);
     opacity: 1;
-    pointer-events: none;
+    transition: opacity .2s linear;
+}
+
+.moviesCard__button_active_movies:hover {
+    opacity: 0.8;
+    background: url(../../images/button-delete.svg) center no-repeat #313131;
 }
 
 .moviesCard__button_active_movies:hover {
