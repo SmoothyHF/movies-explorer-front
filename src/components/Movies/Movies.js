@@ -15,7 +15,7 @@ function Movies({ onSubmit, cards, isLoading, errorMessage, onSaveMovie }) {
         const handleWidthChange = () => {
             setTimeout(() => {
                 setWidth(window.innerWidth);
-            }, 5000);
+            }, 0);
         };
 
         setWidth(window.innerWidth);
@@ -51,7 +51,23 @@ function Movies({ onSubmit, cards, isLoading, errorMessage, onSaveMovie }) {
 
     function handleSubmit(values) {
         onSubmit(values)
+        if (width > 1145) {
+            setCardsCount(12);
+            setCardsCountScale(3);
+            return;
+        };
+
+        if (width <= 1145) {
+            setCardsCount(8);
+            setCardsCountScale(2);
+        };
+
+        if (width <= 715) {
+            setCardsCount(5);
+            return;
+        };
     }
+    
     return (
         <section className='movies'>
             <SearchForm onSubmit={handleSubmit} />
