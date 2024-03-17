@@ -64,11 +64,18 @@ function App() {
 
     handleTokenCheck();
     navigate('/movies', { replace: true })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [jwt]);
+
+  React.useEffect(() => {
+    if (pathname === '/saved-movies') {
+      setSavedMoviesCards(JSON.parse(localStorage.getItem('saved-movies')));
+    }
+  }, [pathname])
 
   function handleRegister({ name, email, password }, handleErrorText) {
     return register(name, email, password)
-    .then(() => login(email, password))
+      .then(() => login(email, password))
       .then(() => navigate('/movies'))
       .then(() => setLoggedIn(true))
       .catch(err => handleErrorText(err.status))

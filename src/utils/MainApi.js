@@ -1,19 +1,6 @@
-// const token = localStorage.getItem('jwt');
-
-// const getConfig = (token) => ({
-//     baseUrl: 'http://localhost:3000',
-//     headers: {
-//         'Accept': 'application/json',
-//         'Content-Type': 'application/json',
-//         'Authorization': `Bearer ${token}`
-//     }
-// });
-
 // const baseUrl = process.env.REACT_APP_API_URL
 
 const baseUrl = 'http://localhost:3000';
-
-// const config = getConfig(token);
 
 const checkResponse = (res) => {
     if (res.ok) {

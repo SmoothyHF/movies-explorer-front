@@ -26,13 +26,15 @@ function SearchForm({ onSubmit }) {
 
     function handleSwitch(e) {
         setIsShortFilm(e.target.checked);
-        localStorage.setItem('filterCheckBox', e.target.checked);
 
         if (words.trim() === '') {
             setErrorText('Введите ключевое слово');
         } else {
             onSubmit({ words, isShortFilm: e.target.checked });
-            localStorage.setItem('SearchForm', words);
+            if (moviesPage) {
+                localStorage.setItem('SearchForm', words);
+                localStorage.setItem('filterCheckBox', e.target.checked);
+            }
         }
     }
 
@@ -43,7 +45,10 @@ function SearchForm({ onSubmit }) {
         } else {
             setErrorText('');
             onSubmit({ words, isShortFilm });
-            localStorage.setItem('SearchForm', words);
+
+            if (moviesPage) {
+                localStorage.setItem('SearchForm', words);
+            }
         }
     }
 
